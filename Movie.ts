@@ -24,8 +24,20 @@ export class Movie{
     
     toString ():string
     {
-        let prof: string 
-        prof  ="Titulo :"+this.title +"Anio de lanzamiento :"+this.releaseYear +this.actors[0].toString()+"\n"+"Nacionalidad :"+ this.nacionality+ "\n"+"Director :"+ this.director.toString()+"Guionista :"+this.writer.toString()+"Idioma :"+this.language + "\nPlataforma :"+this.plataform +"\nPertenece al MCU :"+this.isMCU + "\nnombre protagonista :"+ this.mainCharacterName +"\nProductor :"+this.producer.toString() +"Distribuidora :"+this.distributor + "\mGenero :" +this.genre
+        let prof: string = '';
+        prof  =`Titulo :${this.title}
+                Anio de lanzamiento :${this.releaseYear}
+                Actores :${this.actors.toString()}                
+                Nacionalidad :${this.nacionality}
+                Director :${this.director.toString()}
+                Guionista :${this.writer.toString()}
+                Idioma :${this.language}
+                Plataforma :${this.plataform}
+                Pertenece al MCU :${this.isMCU}
+                Nombre protagonista :${this.mainCharacterName}
+                Productor :${this.producer.toString()}
+                Distribuidora :${this.distributor}
+                Genero :${this.genre}`
         return prof;
     }
     public mostrar()

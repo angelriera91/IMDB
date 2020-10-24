@@ -9,8 +9,8 @@ var Movie = /** @class */ (function () {
         this.genre = genre;
     }
     Movie.prototype.toString = function () {
-        var prof;
-        prof = "Titulo :" + this.title + "Anio de lanzamiento :" + this.releaseYear + this.actors[0].toString() + "\n" + "Nacionalidad :" + this.nacionality + "\n" + "Director :" + this.director.toString() + "Guionista :" + this.writer.toString() + "Idioma :" + this.language + "\nPlataforma :" + this.plataform + "\nPertenece al MCU :" + this.isMCU + "\nnombre protagonista :" + this.mainCharacterName + "\nProductor :" + this.producer.toString() + "Distribuidora :" + this.distributor + "\mGenero :" + this.genre;
+        var prof = '';
+        prof = "Titulo :" + this.title + "\n                Anio de lanzamiento :" + this.releaseYear + "\n                Actores :" + this.actors.toString() + "                \n                Nacionalidad :" + this.nacionality + "\n                Director :" + this.director.toString() + "\n                Guionista :" + this.writer.toString() + "\n                Idioma :" + this.language + "\n                Plataforma :" + this.plataform + "\n                Pertenece al MCU :" + this.isMCU + "\n                Nombre protagonista :" + this.mainCharacterName + "\n                Productor :" + this.producer.toString() + "\n                Distribuidora :" + this.distributor + "\n                Genero :" + this.genre;
         return prof;
     };
     Movie.prototype.mostrar = function () {

@@ -26,15 +26,15 @@ let guionista2 = new Professional('Jonathan Nolan',44,'Hombre',54,180,'Negro','A
 let productor2 = new Professional('Emma Thomas',48,'Mujer',70,168,'Moreno','Marron','Blanca',false,'Britanica',0,'Productora')
 
 let pelicula2 = new Movie('Interstellar',2014,"America","Ciencia Ficcion",)
-pelicula1.actors = [actor11,actor22];
-pelicula1.director = director2;
-pelicula1.writer = guionista2;
-pelicula1.language = "Multilanguage";
-pelicula1.plataform = "Netflix";
-pelicula1.isMCU = false;
-pelicula1.mainCharacterName = "Joseph Cooper";
-pelicula1.producer = productor2;
-pelicula1.distributor = "Paramount Pictures";
+pelicula2.actors = [actor11,actor22];
+pelicula2.director = director2;
+pelicula2.writer = guionista2;
+pelicula2.language = "Multilanguage";
+pelicula2.plataform = "Netflix";
+pelicula2.isMCU = false;
+pelicula2.mainCharacterName = "Joseph Cooper";
+pelicula2.producer = productor2;
+pelicula2.distributor = "Paramount Pictures";
 
 //actor1.mostrarTodo();
 //actor2.mostrarTodo();
@@ -42,6 +42,6 @@ pelicula1.distributor = "Paramount Pictures";
 //guionista.mostrarTodo();
 //productor.mostrarTodo();
 
-//pelicula2.mostrar();
+//pelicula1.mostrar();
  let bdd = new IMDB([pelicula1,pelicula2]);
  bdd.mostrarTodo();

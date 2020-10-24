@@ -25,7 +25,7 @@ var Professional = /** @class */ (function () {
         else {
             status = 'No, sigue en activo';
         }
-        prof += "\n                Nombre: " + this.name + ",\n                Edad: " + this.age + ",\n                genero: " + this.genre + ",\n                peso: " + this.weight + " kg,\n                altura: " + this.height + " cm,\n                Color de pelo: " + this.hairColor + ",\n                Color de ojos: " + this.eyeColor + ",\n                Raza: " + this.race + ",\n                \u00BFEsta Retirado?: " + status + ",\n                Nacionalidad: " + this.nationality + ",\n                Numero de Oscars: " + this.oscarsNumber + ",\n                Profesion: " + this.profession + "\n ";
+        prof += "\n                Nombre: " + this.name + ",\n                Edad: " + this.age + ",\n                Genero: " + this.genre + ",\n                Peso: " + this.weight + " kg,\n                Altura: " + this.height + " cm,\n                Color de pelo: " + this.hairColor + ",\n                Color de ojos: " + this.eyeColor + ",\n                Raza: " + this.race + ",\n                \u00BFEsta Retirado?: " + status + ",\n                Nacionalidad: " + this.nationality + ",\n                Numero de Oscars: " + this.oscarsNumber + ",\n                Profesion: " + this.profession + "\n ";
         return prof;
     };
     Professional.prototype.mostrarTodo = function () {

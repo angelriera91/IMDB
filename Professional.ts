@@ -48,9 +48,9 @@ export class Professional{
         prof += `
                 Nombre: ${this.name},
                 Edad: ${this.age},
-                genero: ${this.genre},
-                peso: ${this.weight} kg,
-                altura: ${this.height} cm,
+                Genero: ${this.genre},
+                Peso: ${this.weight} kg,
+                Altura: ${this.height} cm,
                 Color de pelo: ${this.hairColor},
                 Color de ojos: ${this.eyeColor},
                 Raza: ${this.race},
