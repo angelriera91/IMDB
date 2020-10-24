@@ -2,7 +2,7 @@ import {Professional} from "./Professional"
 export class Movie{
     public title :  string;
     public releaseYear : number;
-    public actors : Professional;
+    public actors : Professional[];
     public nacionality :  string;
     public director : Professional;
     public writer : Professional;
@@ -22,10 +22,11 @@ export class Movie{
         this.genre = genre;
     }
     
-    public toString ():string
+    toString ():string
     {
-        let texto
-        return texto = "Titulo :"+this.title +"\nAnio de lanzamiento : "+ this.releaseYear+"\n"+this.actors.toString()+"\n"+"Nacionalidad :"+ this.nacionality+ this.director.toString()+this.writer.toString()+"Idioma :"+this.language + "\nPlataforma :"+this.plataform +"\nPertenece al MCU :"+this.isMCU + "\nnombre protagonista :"+ this.mainCharacterName +"\nProductor :"+this.producer.toString() +"Distribuidora :"+this.distributor + "\mGenero :" +this.genre
+        let prof: string 
+        prof  ="Titulo :"+this.title +"Anio de lanzamiento :"+this.releaseYear +this.actors.toString()+"\n"+"Nacionalidad :"+ this.nacionality+ "\n"+"Director :"+ this.director.toString()+"Guionista :"+this.writer.toString()+"Idioma :"+this.language + "\nPlataforma :"+this.plataform +"\nPertenece al MCU :"+this.isMCU + "\nnombre protagonista :"+ this.mainCharacterName +"\nProductor :"+this.producer.toString() +"Distribuidora :"+this.distributor + "\mGenero :" +this.genre
+        return prof;
     }
     public mostrar()
     {

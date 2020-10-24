@@ -1,11 +1,27 @@
+import { Movie } from "./Movie"
 import {Professional} from "./Professional"
 
-let profesional1 = new Professional('Angel',29,'Hombre',84,174,'Castaño','Marron','Blanco',false,'Español',12,'Actor')
-let profesional2 = new Professional('David',37,'Hombre',84,179,'Castaño','Marron','Blanco',true,'Frances',24,'Doblador')
-let profesional3 = new Professional('Mikel',21,'Hombre',72,179,'Rubio','Azul','Blanco',false,'Español',24,'Maquillador')
-let profesional4 = new Professional('Maria',31,'Mujer',54,171,'Negro','Verdes','Blanco',false,'Alemana',24,'Directora')
+let actor1 = new Professional('Robert Downey Jr.',55,'Hombre',73,164,'Castaño','Marron','Blanco',false,'Estadounidense',0,'Actor')
+let actor2 = new Professional('Samuel L. Jackson',71,'Hombre',91,189,'Calvo','Marron','Negro',false,'Estadounidense',1,'Actor')
+let director = new Professional('Jon favreau',54,'Hombre',96,176,'Moreno','Marron','Blanco',false,'Estadounidense',0,'Director')
+let guionista = new Professional('Justin theroux',49,'Hombre',54,171,'Negro','Verdes','Blanco',false,'Estadounidense',0,'Guionista')
+let productor = new Professional('Kevin Feige',47,'Hombre',92,180,'Moreno','Azul','Blanco',false,'Estadounidense',0,'Productor')
 
-profesional1.mostrarTodo();
-profesional2.mostrarTodo();
-profesional3.mostrarTodo();
-profesional4.mostrarTodo();
+let pelicula1 = new Movie('Iron Man 2',2010,"America","Accion Superheroes",)
+pelicula1.actors = [actor1,actor2];
+pelicula1.director = director;
+pelicula1.writer = guionista;
+pelicula1.language = "Multilanguage";
+pelicula1.plataform = "Disney Plus";
+pelicula1.isMCU = true;
+pelicula1.mainCharacterName = "Iron Man";
+pelicula1.producer = productor;
+pelicula1.distributor = "Paramount Pictures";
+
+//actor1.mostrarTodo();
+//actor2.mostrarTodo();
+//director.mostrarTodo();
+//guionista.mostrarTodo();
+//productor.mostrarTodo();
+
+pelicula1.mostrar();

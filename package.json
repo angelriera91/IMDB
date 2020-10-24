@@ -1,0 +1,19 @@
+{
+  "name": "bbdd-imdb",
+  "version": "1.0.0",
+  "description": "Miniproyecto IMDB Mikel y Angel",
+  "main": "Main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angelriera91/IMDB.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/angelriera91/IMDB/issues"
+  },
+  "homepage": "https://github.com/angelriera91/IMDB#readme"
+}

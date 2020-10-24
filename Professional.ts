@@ -31,10 +31,11 @@ export class Professional{
 
     }
 
-    mostrarTodo(){
+    toString():string
+    {
 
         let prof: string = ''
-        let status: String;
+        let status: string;
 
         if(this.isRetired == true){
             status = 'Si, esta viviendo la vida'
@@ -57,11 +58,14 @@ export class Professional{
                 Nacionalidad: ${this.nationality},
                 Numero de Oscars: ${this.oscarsNumber},
                 Profesion: ${this.profession}\n `
-
-        console.log(prof)
+        return prof;
+        
 
     }
 
-
+    mostrarTodo()
+    {
+        console.log(this.toString())
+    }
 }
 
