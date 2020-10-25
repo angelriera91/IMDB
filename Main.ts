@@ -1,6 +1,8 @@
 import { Movie } from "./Movie"
 import {Professional} from "./Professional"
 import {IMDB} from "./IMDB"
+const fs = require('fs');
+ 
 
 let actor1 = new Professional('Robert Downey Jr.',55,'Hombre',73,164,'Castaño','Marron','Blanco',false,'Estadounidense',0,'Actor')
 let actor2 = new Professional('Samuel L. Jackson',71,'Hombre',91,189,'Calvo','Marron','Negro',false,'Estadounidense',1,'Actor')
@@ -45,3 +47,20 @@ pelicula2.distributor = "Paramount Pictures";
 //pelicula1.mostrar();
  let bdd = new IMDB([pelicula1,pelicula2]);
  bdd.mostrarTodo();
+
+ let basededatos = JSON.stringify(bdd)
+
+
+fs.writeFileSync("imdbBBDD.json", basededatos, function (err) {
+  if (err) throw err;
+  console.log('Saved!');
+})
+
+
+fs.readFileSync('imdbBBDD.json',(err, datos) => {
+    if (err) throw err
+    let IMBDdatos = JSON.parse(datos)
+    console.log(IMBDdatos)
+    console.log("Readed!")
+})
+

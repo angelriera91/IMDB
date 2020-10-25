@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/angelriera91/IMDB/issues"
   },
-  "homepage": "https://github.com/angelriera91/IMDB#readme"
+  "homepage": "https://github.com/angelriera91/IMDB#readme",
+  "dependencies": {
+    "@types/node": "^14.14.2"
+  }
 }

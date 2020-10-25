@@ -3,6 +3,7 @@ exports.__esModule = true;
 var Movie_1 = require("./Movie");
 var Professional_1 = require("./Professional");
 var IMDB_1 = require("./IMDB");
+var fs = require('fs');
 var actor1 = new Professional_1.Professional('Robert Downey Jr.', 55, 'Hombre', 73, 164, 'Castaño', 'Marron', 'Blanco', false, 'Estadounidense', 0, 'Actor');
 var actor2 = new Professional_1.Professional('Samuel L. Jackson', 71, 'Hombre', 91, 189, 'Calvo', 'Marron', 'Negro', false, 'Estadounidense', 1, 'Actor');
 var director = new Professional_1.Professional('Jon Favreau', 54, 'Hombre', 96, 176, 'Moreno', 'Marron', 'Blanco', false, 'Estadounidense', 0, 'Director');
@@ -41,3 +42,15 @@ pelicula2.distributor = "Paramount Pictures";
 //pelicula1.mostrar();
 var bdd = new IMDB_1.IMDB([pelicula1, pelicula2]);
 bdd.mostrarTodo();
+var basededatos = JSON.stringify(bdd);
+fs.writeFileSync("imdbBBDD.json", basededatos, function (err) {
+    if (err)
+        throw err;
+    console.log('Saved!');
+});
+fs.readFileSync('imdbBBDD.json', function (err, datos) {
+    if (err)
+        throw err;
+    var IMBDdatos = JSON.parse(datos);
+    console.log(IMBDdatos);
+});
