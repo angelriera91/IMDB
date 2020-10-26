@@ -10,6 +10,8 @@ let director = new Professional('Jon Favreau',54,'Hombre',96,176,'Moreno','Marro
 let guionista = new Professional('Justin Theroux',49,'Hombre',54,171,'Negro','Verdes','Blanco',false,'Estadounidense',0,'Guionista')
 let productor = new Professional('Kevin Feige',47,'Hombre',92,180,'Moreno','Azul','Blanco',false,'Estadounidense',0,'Productor')
 
+
+
 let pelicula1 = new Movie('Iron Man 2',2010,"America","Accion Superheroes",)
 pelicula1.actors = [actor1,actor2];
 pelicula1.director = director;
@@ -48,10 +50,22 @@ pelicula2.distributor = "Paramount Pictures";
  let bdd = new IMDB([pelicula1,pelicula2]);
  let archivo = "imdbBBDD.json"
 
- bdd.mostrarTodo();
+ //bdd.mostrarTodo();
 
 bdd.wirteJson(archivo)
 
-let bdd2 = new IMDB([])
-console.log(bdd2.readJson(archivo))
+let bdd2 = new IMDB ([])
+
+let imdb: IMDB
+imdb = bdd2.readJson(archivo)
+console.log(imdb.toString())
+
+
+
+
+
+
+
+
+
 

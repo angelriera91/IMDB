@@ -25,11 +25,13 @@ var IMDB = /** @class */ (function () {
         });
     };
     IMDB.prototype.readJson = function (archivo) {
-        var pipo = fs.readFileSync(archivo);
+        var pipo = fs.readFileSync(archivo, "UTF-8");
         var IMBDdatos = JSON.parse(pipo);
-        return IMBDdatos;
-        console.log(IMBDdatos);
-        console.log("Readed!");
+        var imdb = new IMDB(IMBDdatos);
+        imdb.mostrarTodo();
+        return imdb;
+        //           console.log(IMBDdatos);
+        //           console.log("Readed!");
     };
     return IMDB;
 }());

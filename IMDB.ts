@@ -32,11 +32,13 @@ export class IMDB{
    }
 
    readJson(archivo: string): IMDB{
-            let pipo = fs.readFileSync(archivo)             
-            let IMBDdatos:IMDB = JSON.parse(pipo);
-            return IMBDdatos;
-           console.log(IMBDdatos);
-           console.log("Readed!");
+            let pipo = fs.readFileSync(archivo, "UTF-8")             
+            let IMBDdatos = JSON.parse(pipo);
+            let imdb = new IMDB(IMBDdatos)
+            imdb.mostrarTodo()
+            return imdb;
+//           console.log(IMBDdatos);
+//           console.log("Readed!");
        
 
    }   
