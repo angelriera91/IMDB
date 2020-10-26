@@ -41,16 +41,8 @@ pelicula2.distributor = "Paramount Pictures";
 //productor.mostrarTodo();
 //pelicula1.mostrar();
 var bdd = new IMDB_1.IMDB([pelicula1, pelicula2]);
+var archivo = "imdbBBDD.json";
 bdd.mostrarTodo();
-var basededatos = JSON.stringify(bdd);
-fs.writeFileSync("imdbBBDD.json", basededatos, function (err) {
-    if (err)
-        throw err;
-    console.log('Saved!');
-});
-fs.readFileSync('imdbBBDD.json', function (err, datos) {
-    if (err)
-        throw err;
-    var IMBDdatos = JSON.parse(datos);
-    console.log(IMBDdatos);
-});
+bdd.wirteJson(archivo);
+var bdd2 = new IMDB_1.IMDB([]);
+console.log(bdd2.readJson(archivo));

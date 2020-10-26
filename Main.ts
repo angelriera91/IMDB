@@ -46,21 +46,12 @@ pelicula2.distributor = "Paramount Pictures";
 
 //pelicula1.mostrar();
  let bdd = new IMDB([pelicula1,pelicula2]);
+ let archivo = "imdbBBDD.json"
+
  bdd.mostrarTodo();
 
- let basededatos = JSON.stringify(bdd)
+bdd.wirteJson(archivo)
 
-
-fs.writeFileSync("imdbBBDD.json", basededatos, function (err) {
-  if (err) throw err;
-  console.log('Saved!');
-})
-
-
-fs.readFileSync('imdbBBDD.json',(err, datos) => {
-    if (err) throw err
-    let IMBDdatos = JSON.parse(datos)
-    console.log(IMBDdatos)
-    console.log("Readed!")
-})
+let bdd2 = new IMDB([])
+console.log(bdd2.readJson(archivo))
 
